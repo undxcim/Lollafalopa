@@ -1,11 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def principal():
-    return "Bienvenido a Lollafalopa. Mucha droga en camino."
+    return render_template('index.html')
+
+@app.route('/artistas')
+def Artistas():
+    return render_template('artistas.html')
 
 if __name__ == '__main__':
-    app.run()
-
+    app.run(debug=True, port=2022)
