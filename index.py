@@ -6,9 +6,9 @@ app = Flask(__name__)
 def principal():
     return render_template('index.html')
 
-@app.route('/artistas')
-def Artistas():
-    return render_template('artistas.html')
+@app.route('/grilla')
+def Grilla():
+    return render_template('grilla.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=2022)
